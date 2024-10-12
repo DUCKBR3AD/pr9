@@ -6,7 +6,11 @@ while True:
         print(list)
         break
     else:
-        last = int(inp) % 2
-        if last != 0:
-            list.append(int(inp))
+        try:
+            last = int(inp) % 2
+            if last != 0:
+                list.append(int(inp))
+        except ValueError:
+            print("Некорректный ввод. Введите число.")
+            break
     
